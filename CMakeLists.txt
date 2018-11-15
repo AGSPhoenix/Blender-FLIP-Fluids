@@ -51,7 +51,7 @@ if(WITH_OPENCL)
 endif()
 
 if(WITH_OPENCL)
-    if(MSVC OR MINGW)
+    if(MINGW)
         # Set to OpenCL ICD loader instead of vendor library
         set(OpenCL_LIBRARY "C:/Windows/System32/OpenCL.dll")
     endif()
