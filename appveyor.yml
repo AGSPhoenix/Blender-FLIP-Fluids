@@ -1,0 +1,31 @@
+platform:
+  - x86
+  - x64
+
+environment:
+  matrix:
+    - target: Win32
+    - target: x64
+
+configuration: Release
+
+before_build:
+- cmd: >-
+  call install-cuda.cmd
+
+build:
+  parallel: true
+  # publish_wap: true
+
+build_script:
+  cmd: |
+    cmake -G "Visual Studio 15 2017" -A %target% .
+    cmake --build . --config Release
+    cd bl_flip_fluids
+    7z a flip_fluids_addon.zip flip_fluids_addon
+
+test: off
+
+artifacts:
+  - path: bl_flip_fluids/flip_fluids_addon.zip
+    name: Addon zip
