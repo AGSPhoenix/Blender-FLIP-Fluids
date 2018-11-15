@@ -10,8 +10,7 @@ environment:
 configuration: Release
 
 before_build:
-- cmd: >-
-  call install-cuda.cmd
+- cmd: call install-cuda.cmd
 
 build:
   parallel: true
