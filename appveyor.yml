@@ -12,10 +12,6 @@ configuration: Release
 before_build:
 - cmd: call install-cuda.cmd
 
-build:
-  parallel: true
-  # publish_wap: true
-
 build_script:
   cmd: |
     cmake -G "Visual Studio 15 2017" -A %target% .
