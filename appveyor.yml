@@ -1,8 +1,6 @@
 image: Visual Studio 2017
 
-platform:
-  - x86
-  - x64
+platform: Any CPU
 
 environment:
   matrix:
