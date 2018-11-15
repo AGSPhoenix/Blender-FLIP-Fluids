@@ -4,8 +4,8 @@ platform: x64 #CUDA stuff seems to only be available on x64
 
 environment:
   matrix:
-    - target: Win32
     - target: x64
+    - target: Win32
 
 configuration: Release
 
