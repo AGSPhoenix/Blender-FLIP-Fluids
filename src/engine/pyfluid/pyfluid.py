@@ -44,11 +44,11 @@ class PyFluidLib():
 
         system = platform.system()
         if system == "Windows":
-            libname = "libblpyfluid.dll"
+            libname = "blpyfluid.dll"
         elif system == "Darwin":
-            libname = "libblpyfluid.dylib"
+            libname = "blpyfluid.dylib"
         elif system == "Linux":
-            libname = "libblpyfluid.so"
+            libname = "blpyfluid.so"
         else:
             raise LibraryLoadError("Unable to recognize system: " + system)
 

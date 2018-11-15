@@ -35,7 +35,7 @@ SOFTWARE.
 
 #include <vector>
 #include <string>
-#include <algortihm>
+#include <algorithm>
 
 #include "../array3d.h"
 

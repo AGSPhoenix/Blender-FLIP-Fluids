@@ -25,7 +25,7 @@ SOFTWARE.
 #include "../openclutils.h"
 #include "cbindings.h"
 
-#include <algortihm>
+#include <algorithm>
 
 #ifdef _WIN32
     #define EXPORTDLL __declspec(dllexport)
