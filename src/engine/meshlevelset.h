@@ -64,6 +64,8 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include "markerparticle.h"
 #include "threadutils.h"
 
+#include <algortihm>
+
 struct VelocityDataGrid {
     MACVelocityField field;
     Array3d<float> weightU;
