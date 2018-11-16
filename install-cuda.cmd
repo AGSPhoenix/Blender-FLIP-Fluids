@@ -21,14 +21,14 @@ cuda_10.0.130_411.31_win10.exe -s nvcc_10.0^
 dir "%ProgramFiles%"
 dir "C:\Program Files"
 dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA"
-dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0"
-dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin"
+dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0"
+dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin"
 
-if NOT EXIST "%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\cudart64_80.dll" ( 
+if NOT EXIST "%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin\cudart64_100.dll" ( 
 echo "Failed to install CUDA"
 exit /B 1
 )
 
-set PATH=%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin;%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v8.0\libnvvp;%PATH%
+set PATH=%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;%PATH%
 
 nvcc -V
