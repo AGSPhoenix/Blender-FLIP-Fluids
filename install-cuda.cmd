@@ -14,7 +14,7 @@ cuda_10.0.130_411.31_win10.exe -s nvcc_10.0^
  curand_dev_10.0^
  cusolver_10.0^
  cusolver_dev_10.0^
- cusparse_dev_10.0
+ cusparse_10.0
 
 dir "%ProgramFiles%"
 dir "C:\Program Files"
