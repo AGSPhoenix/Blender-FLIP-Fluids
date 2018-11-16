@@ -1,0 +1,29 @@
+image: Visual Studio 2017
+
+platform: x64 #CUDA stuff seems to only be available on x64
+
+environment:
+  matrix:
+    - target: x64
+    - target: Win32
+
+configuration: Release
+
+# on_finish:
+#   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+before_build:
+- cmd: call install-cuda.cmd
+
+build_script:
+  cmd: |
+    cmake -G "Visual Studio 15 2017" -A %target% .
+    cmake --build . --config Release
+    cd bl_flip_fluids
+    7z a flip_fluids_addon.zip flip_fluids_addon
+
+test: off
+
+artifacts:
+  - path: bl_flip_fluids/flip_fluids_addon.zip
+    name: Addon zip
