@@ -7,25 +7,20 @@ cuda_10.0.130_411.31_win10.exe -s nvcc_10.0^
  cupti_10.0^
  cublas_10.0^
  cublas_dev_10.0^
- cudart_10.0^
  cufft_10.0^
  cufft_dev_10.0^
  curand_10.0^
  curand_dev_10.0^
  cusolver_10.0^
  cusolver_dev_10.0^
- cusparse_10.0
+ cusparse_10.0^
+ cusparse_dev_10.0
 
 dir "%ProgramFiles%"
 dir "C:\Program Files"
 dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA"
 dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0"
 dir "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin"
-
-if NOT EXIST "%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin\cudart64_100.dll" ( 
-echo "Failed to install CUDA"
-exit /B 1
-)
 
 set PATH=%ProgramFiles%\NVIDIA GPU Computing Toolkit\CUDA\v10.0\bin;%PATH%
 
