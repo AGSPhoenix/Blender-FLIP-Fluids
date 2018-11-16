@@ -7,7 +7,7 @@ cuda_10.0.130_411.31_win10.exe -s nvcc_10.0^
  cupti_10.0^
  cublas_10.0^
  cublas_dev_10.0^
- cufft_10.0^
+ cudart_10.0^
  cufft_dev_10.0^
  curand_10.0^
  curand_dev_10.0^
