@@ -3,18 +3,7 @@ rem stolen from https://github.com/willyd/appveyor-cuda-test - thanks man
 echo Downloading CUDA toolkit 10
 appveyor DownloadFile  https://developer.nvidia.com/compute/cuda/10.0/Prod/local_installers/cuda_10.0.130_411.31_win10 -FileName cuda_10.0.130_411.31_win10.exe
 echo Installing CUDA toolkit 10
-cuda_10.0.130_411.31_win10.exe -s nvcc_10.0^
- cupti_10.0^
- cublas_10.0^
- cublas_dev_10.0^
- cufft_10.0^
- cufft_dev_10.0^
- curand_10.0^
- curand_dev_10.0^
- cusolver_10.0^
- cusolver_dev_10.0^
- cusparse_10.0^
- cusparse_dev_10.0
+cuda_10.0.130_411.31_win10.exe -s nvcc_10.0
 
 dir "%ProgramFiles%"
 dir "C:\Program Files"
