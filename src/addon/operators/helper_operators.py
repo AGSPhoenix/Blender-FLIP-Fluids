@@ -217,7 +217,7 @@ class FlipFluidHelperLoadLastFrame(bpy.types.Operator):
             base = f.split(".")[0]
             frameno = int(base[-6:])
             max_frameno = max(frameno, max_frameno)
-        context.scene.frame_set(max_frameno)
+        context.scene.frame_set(max_frameno + bpy.context.scene.flip_fluid_helper.playback_frame_offset)
         return {'FINISHED'}
 
 
